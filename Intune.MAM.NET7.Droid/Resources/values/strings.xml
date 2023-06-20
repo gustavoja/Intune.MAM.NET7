@@ -1,0 +1,15 @@
+﻿<resources>
+    <string name="app_name">Intune MAM .NET7</string>
+    <string name="welcome">Welcome to Intune tester</string>
+    <string name="enroll">Enroll</string>
+    <string name="unenroll">Unenroll</string>
+    <string name="login">Login</string>
+    <string name="logout">Logout</string>
+    <string name="logs">Logs</string>
+  
+    <string name="developed">
+      Developed By Gustavo Jiménez
+    </string>
+</resources>
+
+

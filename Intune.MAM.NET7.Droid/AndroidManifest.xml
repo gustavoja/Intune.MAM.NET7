@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:icon="@mipmap/appicon" android:label="@string/app_name" android:supportsRtl="true" package="intune.mam.net7" android:versionCode="1" android:versionName="1.0">
+	<application android:allowBackup="true" android:fullBackupOnly="true" android:fullBackupContent="true" android:backupAgent="com.microsoft.intune.mam.client.app.backup.MAMDefaultBackupAgent" android:label="Intune MAM .NET7" android:icon="@mipmap/appicon">
+		<meta-data android:name="android.content.APP_RESTRICTIONS" android:resource="@xml/app_restrictions" />
+		<!-- Required to prevent multiple prompts for sign in -->
+		<!-- Replace {your AAD_CLIENT_ID} with your Active directory ID registered in the Azure Active Directory portal -->
+		<meta-data android:name="com.microsoft.intune.mam.aad.ClientID" android:value="your AAD_CLIENT_ID" />
+		<!--<meta-data android:name="com.microsoft.intune.mam.aad.SkipBroker" android:value="true" />-->
+	</application>
+	<uses-permission android:name="android.permission.INTERNET" />
+	<uses-sdk android:targetSdkVersion="33" android:minSdkVersion="31" />
+	<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+	<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+	<queries>
+		<package android:name="com.azure.authenticator" />
+		<package android:name="intune.mam.net7" />
+		<package android:name="com.microsoft.windowsintune.companyportal" />
+	</queries>
+</manifest>

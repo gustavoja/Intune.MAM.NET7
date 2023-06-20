@@ -1,0 +1,42 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net7.0-android33.0</TargetFramework>
+    <SupportedOSPlatformVersion>31.0</SupportedOSPlatformVersion>
+    <OutputType>Exe</OutputType>
+    <Nullable>enable</Nullable>
+    <ApplicationId>intune.mam.net7</ApplicationId>
+    <ApplicationVersion>1</ApplicationVersion>
+    <ApplicationDisplayVersion>1.0</ApplicationDisplayVersion>
+    <ApplicationTitle>Intune MAM .NET7</ApplicationTitle>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <EmbedAssembliesIntoApk>True</EmbedAssembliesIntoApk>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Identity.Client" Version="4.54.1" />
+    <PackageReference Include="Xamarin.AndroidX.CardView" Version="1.0.0.20" />
+    <PackageReference Include="Xamarin.AndroidX.ConstraintLayout" Version="2.1.4.5" />
+    <PackageReference Include="Xamarin.AndroidX.ConstraintLayout.Core" Version="1.0.4.5" />
+    <PackageReference Include="Xamarin.AndroidX.Activity" Version="1.7.2" />
+    <PackageReference Include="Xamarin.AndroidX.Activity.Ktx" Version="1.7.2" />
+    <PackageReference Include="Microsoft.Intune.Maui.Essentials.android" Version="9.5.2-beta2" />
+    <PackageReference Include="Xamarin.AndroidX.RecyclerView" Version="1.3.0.2" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Core\Core.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove="Resources\layout\log_item.xml" />
+    <None Remove="Resources\layout\main_activity.xml" />
+    <None Remove="Resources\values\colors.xml" />
+    <None Remove="Resources\values\dimens.xml" />
+    <None Remove="Resources\values\syles.xml" />
+    <None Remove="Resources\xml\" />
+    <None Remove="Providers\" />
+    <None Remove="Resources\xml\app_restrictions.xml" />
+    <None Remove="Resources\xml\provider_paths.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Resources\drawable\" />
+  </ItemGroup>
+</Project>
